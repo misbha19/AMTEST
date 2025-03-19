@@ -32,9 +32,10 @@ public class FooterTest extends  Base {
         Assert.assertTrue(fTitletest);
     }
     @Test
-    void checkMainFooterTitles() {
-        int mainTitleCount = footer.getMfooterTitleCount();
+    void checkFooterTitles() {
+        int mainTitleCount = footer.getfooterTitleCount();
         Assert.assertTrue(mainTitleCount ==32);
+
     }
     @Test
     void checkTotalFooterTitles() {
@@ -44,7 +45,7 @@ public class FooterTest extends  Base {
     }
     @AfterMethod
     void cleanUp(){
-        // clean();
+         clean();
     }
 
 }

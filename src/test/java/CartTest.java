@@ -23,37 +23,32 @@ public class CartTest extends Base {
 
     @Test
     void verifyCarturl() {
-        aCart.verifyaddeditemCart("Apple Watch");
-        driver.navigate().refresh();
+        aCart.verifyaddeditemCart("dewalt");
         String expectedinUrl = "ref_=nav_cart";
         Assert.assertTrue(driver.getCurrentUrl().contains(expectedinUrl));
     }
     @Test
     void verifyCartQuantity() {
-        aCart.verifyaddeditemQuantity("Apple Watch");
-        driver.navigate().refresh();
+        aCart.verifyaddeditemQuantity("dewalt");
         Assert.assertTrue(aCart.cartQuantity.getText().contains("1"));
     }
 
     @Test
     void deleteingAllQuantity() {
-        aCart.trashAddedQuantity("Apple Watch");
-        driver.navigate().refresh();
+        aCart.trashAddedQuantity("dewalt");
         Assert.assertTrue(aCart.cartQuantity.getText().contains("0"));
         Assert.assertTrue(aCart.emptyCartPage.getText().contains("Your Amazon Cart is empty"));
     }
 
     @Test
     void verifyIncreasedQuantity() {
-        aCart.increaseItemQuantity("Apple Watch");
-        driver.navigate().refresh();
+        aCart.increaseItemQuantity("dewalt");
         Assert.assertTrue(aCart.cartQuantity.getText().contains("2"));
     }
 
     @Test
     void verifyDecreasedQuantity() {
-        aCart.decreaseItemQuantity("Apple Watch");
-        driver.navigate().refresh();
+        aCart.decreaseItemQuantity("dewalt");
         Assert.assertTrue(aCart.cartQuantity.getText().contains("1"));
     }
 
@@ -61,7 +56,7 @@ public class CartTest extends Base {
 
     @AfterMethod
     void cleanUp(){
-        // clean();
+         clean();
     }
 
 }

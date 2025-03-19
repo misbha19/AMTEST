@@ -9,6 +9,7 @@ public class WindowPage extends Base{
     @FindBy (xpath = "//a[contains(text(), 'Help')]") WebElement helpButton;
     @FindBy (id= "nav-belt") WebElement header;
     @FindBy(css = "#nav-logo") WebElement logo;
+    @FindBy(css = "//div[@class='a-section a-spacing-top-extra-large auth-footer']/div[2]") WebElement footer;
     @FindBy(xpath = "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/ul/li[1]") WebElement conditionsOfuse;
     @FindBy(css = "[class='cs-help-content']") WebElement conditionsPagebody;
     @FindBy(xpath = "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/ul/li[2]") WebElement privacyNotice;
@@ -17,16 +18,20 @@ public class WindowPage extends Base{
 
 
 
+    // WebElement "footer" contains features (Conditions of Use,  Privacy Notice,  Help) that opens up a new window once these are clicked.
+
+
     void checkHelpWindow() {
-        waitforElementvisibility(5000, accountsAndlists);
         movetoElement(accountsAndlists);
         impWait(3000);
-        scrolltoElement(signInbutton);
-        impWait(3000);
+        accountsAndlists.click();
+        waitforElementvisibility(5000, signInbutton);
         signInbutton.click();
+        waitforElementvisibility(10000, footer);
+        movetoElement(footer);
         impWait(3000);
         helpButton.click();
-        impWait(3000);
+        impWait(5000);
         switchtoCurrentwindow();
         movetoElement(header);
         impWait(3000);
@@ -34,12 +39,13 @@ public class WindowPage extends Base{
 
     }
     void checkConditionsWindow() {
-        waitforElementvisibility(5000, accountsAndlists);
         movetoElement(accountsAndlists);
         impWait(3000);
-        scrolltoElement(signInbutton);
-        impWait(3000);
+        accountsAndlists.click();
+        waitforElementvisibility(5000, signInbutton);
         signInbutton.click();
+        waitforElementvisibility(10000, footer);
+        movetoElement(footer);
         impWait(3000);
         conditionsOfuse.click();
         switchtoCurrentwindow();
@@ -50,14 +56,18 @@ public class WindowPage extends Base{
     boolean isPrivacyWindowfooterHasLogo() {
         waitforElementvisibility(5000, accountsAndlists);
         movetoElement(accountsAndlists);
-        impWait(3000);
-        scrolltoElement(signInbutton);
-        impWait(3000);
+        impWait(5000);
+        accountsAndlists.click();
+        waitforElementvisibility(5000, signInbutton);
         signInbutton.click();
         impWait(3000);
+        driver.navigate().refresh();
+        waitforElementvisibility(10000, footer);
+        movetoElement(footer);
+        impWait(5000);
         privacyNotice.click();
         switchtoCurrentwindow();
-        impWait(3000);
+        impWait(5000);
         movetoElement(aFooter);
         return logo.isDisplayed();
 

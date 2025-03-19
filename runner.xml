@@ -1,7 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="AmazonFramework">
-
     <listeners>
         <listener class-name="Listener"></listener>
     </listeners>
@@ -14,6 +13,7 @@
             <class name="DropdownTest"></class>
             <class name="FooterTest"></class>
             <class name="GoogleFrameAndWindowTest"></class>
+            <class name="HeaderTest"></class>
             <class name="HomeTest"/>
             <class name="HyrAlertTest"></class>
             <class name="LocationUpdateTest"></class>

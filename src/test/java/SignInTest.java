@@ -32,7 +32,7 @@ public class SignInTest extends Base{
 
     @AfterMethod
     void cleanUp(){
-        // clean();
+         clean();
     }
 
 }

@@ -14,6 +14,7 @@ public class ColorCheck extends Base{
 
         return searchButton.getCssValue("background-color");
     }
+
     String getHeaderBackgroundColor() {
 
         return header.getCssValue("background-color");

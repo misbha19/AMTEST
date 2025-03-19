@@ -30,6 +30,6 @@ public class MenuTest extends Base{
 
     @AfterMethod
     void cleanUp() {
-        // clean();
+         clean();
     }}
 

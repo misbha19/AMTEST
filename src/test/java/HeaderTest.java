@@ -22,7 +22,7 @@ public class HeaderTest extends  Base{
 
     @AfterMethod
     void cleanUp(){
-        // clean();
+         clean();
     }
 
 

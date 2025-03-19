@@ -26,6 +26,7 @@ public class LocationUpdateTest extends Base {
 
     @AfterMethod
     void cleanup(){
+
         clean();
     }
 

@@ -38,7 +38,7 @@ public class HyrAlertTest extends  Base{
 
     @AfterMethod
     void cleanUp() {
-        // clean();
+        clean();
     }
 
 }

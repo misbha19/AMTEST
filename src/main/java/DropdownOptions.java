@@ -18,8 +18,6 @@ public class DropdownOptions extends Base {
     @FindBy(id = "nav-belt") WebElement header;
 
 
-
-
     void selectCategoryByVisibleText1(String text) {
         dropdownByVisibleText(amazonDropdown, text);
         waitforElementvisibility(5000, header);

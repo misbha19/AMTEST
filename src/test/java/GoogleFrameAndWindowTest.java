@@ -47,7 +47,7 @@ public class GoogleFrameAndWindowTest extends Base {
     }
     @AfterMethod
     void cleanUp(){
-        //clean();
+        clean();
     }
 
 

@@ -36,7 +36,7 @@ ColorCheck color;
 
     @AfterMethod
     void cleanUp() {
-        // clean();
+         clean();
     }}
 
 

@@ -14,6 +14,10 @@ public class WindowTest extends Base {
         aWindow = PageFactory.initElements(driver, WindowPage.class);
     }
 
+
+    // WebElement "footer" contains features (Conditions of Use,  Privacy Notice,  Help) that opens up a new window once these are clicked.
+
+
     @Test
     void testnavigationtoHomepagefromHelp() {
         aWindow.checkHelpWindow();
@@ -37,7 +41,8 @@ public class WindowTest extends Base {
 
     @AfterMethod
     void cleanUp() {
-        // clean();
+
+        clean();
     }
 
 }

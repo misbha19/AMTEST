@@ -69,7 +69,7 @@ import org.testng.annotations.Test;
 
     @AfterMethod
     void cleanup() {
-        //clean();
+        clean();
 
 }}
 

@@ -34,6 +34,11 @@ public class MenuPage extends Base {
         impWait(3000);
         allMenuButton.click();
         impWait(3000);
+
+        for(WebElement allM : menuOptions) {
+            System.out.println("Below is the menu title...........");
+            System.out.println(allM.getText());
+        }
         return menuOptions.size();
 
     }}

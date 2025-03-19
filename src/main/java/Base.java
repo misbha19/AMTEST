@@ -18,7 +18,7 @@ public class Base {
     static WebDriver driver;
 
     void setUp(String url) {
-        driver = new EdgeDriver();
+        driver = new FirefoxDriver();
         driver.get(url);
     }
 
@@ -114,6 +114,7 @@ public class Base {
         void clean () {
 
         driver.quit();
+       
         }}
 
 

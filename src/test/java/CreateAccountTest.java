@@ -21,7 +21,7 @@ public class CreateAccountTest extends Base{
 
     @AfterMethod
     void cleanUp(){
-        // clean();
+        clean();
     }
 
 }

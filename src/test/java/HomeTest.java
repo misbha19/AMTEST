@@ -33,7 +33,8 @@ public class HomeTest extends Base {
 
     @AfterMethod
     void cleanUp(){
-           clean();
+
+        clean();
         }
 
     }
